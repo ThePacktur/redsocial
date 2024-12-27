@@ -1,6 +1,5 @@
 package com.example.rsocialapp
 
-
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -8,21 +7,36 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.rsocialapp.R
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class Principal : AppCompatActivity() {
+
+    private lateinit var tabLayout: TabLayout
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabAdapter: TabAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        // Referencias a los componentes
+        tabLayout = findViewById(R.id.tabs)
+        viewPager = findViewById(R.id.viewPager)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.appbar)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        // Crear el adaptador para ViewPager2
+        tabAdapter = TabAdapter(this)
+        viewPager.adapter = tabAdapter
+
+        // Configurar TabLayout con ViewPager
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "Feed"
+                1 -> tab.text = "Post"
+                2 -> tab.text = "Friends"
+            }
+        }.attach()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

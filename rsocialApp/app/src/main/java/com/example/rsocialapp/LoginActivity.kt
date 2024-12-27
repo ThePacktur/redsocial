@@ -56,6 +56,11 @@ class LoginActivity : ComponentActivity() {
                     // Login exitoso
                     val user = auth.currentUser
                     Toast.makeText(this, "Bienvenido, ${user?.email}", Toast.LENGTH_SHORT).show()
+
+                    // Redirigir al usuario a la actividad principal
+                    val intent = Intent(this, Principal::class.java)
+                    startActivity(intent)  // Iniciar la actividad principal
+                    finish()  // Finalizar LoginActivity para que el usuario no pueda volver a ella al presionar el botón atrás
                 } else {
                     // Error en el login
                     Toast.makeText(this, "Autenticación fallida. Intente de nuevo.", Toast.LENGTH_SHORT).show()
