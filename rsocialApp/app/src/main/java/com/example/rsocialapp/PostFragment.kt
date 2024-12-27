@@ -13,6 +13,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 
 class PostFragment : Fragment() {
 
@@ -21,6 +22,7 @@ class PostFragment : Fragment() {
     private lateinit var imgSelectedImage: ImageView
     private lateinit var btnPost: Button
     private var selectedImageUri: Uri? = null
+    private val postViewModel: PostViewModel by activityViewModels()
 
     companion object {
         private const val REQUEST_IMAGE_PICK = 100
@@ -69,7 +71,13 @@ class PostFragment : Fragment() {
             return
         }
 
-        // Aquí puedes enviar el contenido del post al servidor o manejarlo según tu lógica
+        val imageUriString = selectedImageUri?.toString()
+        val newPost = Post(postText, imageUriString)
+        postViewModel.addPost(newPost)
+
         Toast.makeText(context, "Post enviado con éxito", Toast.LENGTH_SHORT).show()
+
+        etPostText.text.clear()
+        imgSelectedImage.setImageURI(null)
     }
 }

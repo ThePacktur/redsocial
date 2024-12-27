@@ -7,7 +7,7 @@
 
     <!-- RecyclerView para mostrar la lista de publicaciones -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewFeed"
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp" />

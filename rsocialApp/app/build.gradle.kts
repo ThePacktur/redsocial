@@ -48,6 +48,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation ("com.github.bumptech.glide:glide:4.15.1") // Añadir esta línea para Glide
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
+    implementation ("androidx.fragment:fragment-ktx:1.5.5")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0")
     implementation("com.google.firebase:firebase-analytics")
     implementation ("com.google.firebase:firebase-auth:21.0.3")
 }
