@@ -12,24 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RsocialApp"
         tools:targetApi="31">
-        <activity
-            android:name=".Principal"
-            android:exported="false" />
-        <activity
-            android:name=".ForgotPasswordActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
+
+        <!-- LoginActivity: Pantalla principal al iniciar la aplicación -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- RegisterActivity: Pantalla para registro de usuarios -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- ForgotPasswordActivity: Pantalla para recuperar contraseña -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- Principal: Pantalla principal después del login -->
+        <activity
+            android:name=".Principal"
+            android:exported="false" />
     </application>
 
 </manifest>
