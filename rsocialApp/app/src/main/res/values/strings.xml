@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">GlobalTrip</string>
+    <string name="etEmail">Email</string>
+    <string name="etPassword">Password</string>
+    <string name="btnLogin">Login</string>
+    <string name="registrate">Registrate</string>
+    <string name="etOlviPass">Olvido la contrasenia</string>
+    <string name="user">Usuario</string>
+    <string name="btnRestPassword">Restaurar contrasenia</string>
+    <string name="app_logo">Logo de la Aplicación</string>
+    <string name="forgot_password_image_desc">Imagen de recuperar contraseña</string>
+    <!-- Bottom Navigation Menu -->
+    <string name="nav_feed">feed</string>
+    <string name="nav_post">post</string>
+    <string name="nav_friends">friends</string>
+    <string name="nav_messages">messages</string>
+    <string name="perfil">Perfil</string>
+    <string name="setting">Configuracion</string>
+    <string name="help">Ayuda</string>
+    <string name="write_a_message">write_a_message</string>
+    <string name="send">send</string>
+    <string name="upload_image">upload_image</string>
+    <string name="post">post</string>
+    <string name="write_your_post">write_your_post</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

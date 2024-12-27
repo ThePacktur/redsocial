@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "696200355134",
+    "project_id": "redsocialfireb",
+    "storage_bucket": "redsocialfireb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696200355134:android:49c0530704be46dc2aa06f",
+        "android_client_info": {
+          "package_name": "com.example.rsocialapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVIGEt2vcbJKoOmIR8NZEQJJ8VkrR62-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
